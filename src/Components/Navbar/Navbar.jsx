@@ -24,7 +24,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 "
             >
               <NavLink
                 to="/"
@@ -36,13 +36,42 @@ const Navbar = () => {
               >
                 Home
               </NavLink>
+              <NavLink
+                to="/property"
+                className={({ isActive }) =>
+                  isActive
+                    ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
+                    : 'font-bold'
+                }
+              >
+                View Property
+              </NavLink>
+              <NavLink
+                to="/login"
+                className={({ isActive }) =>
+                  isActive
+                    ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
+                    : 'font-bold'
+                }
+              >
+                Login
+              </NavLink>
+              <NavLink
+                to="/register"
+                className={({ isActive }) =>
+                  isActive
+                    ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
+                    : 'font-bold'
+                }
+              >
+                Register
+              </NavLink>
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">daisyUI</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            {' '}
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -52,6 +81,36 @@ const Navbar = () => {
               }
             >
               Home
+            </NavLink>
+            <NavLink
+              to="/property"
+              className={({ isActive }) =>
+                isActive
+                  ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
+                  : 'font-bold'
+              }
+            >
+              View Property
+            </NavLink>
+            <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                isActive
+                  ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
+                  : 'font-bold'
+              }
+            >
+              Login
+            </NavLink>
+            <NavLink
+              to="/register"
+              className={({ isActive }) =>
+                isActive
+                  ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
+                  : 'font-bold'
+              }
+            >
+              Register
             </NavLink>
           </ul>
         </div>

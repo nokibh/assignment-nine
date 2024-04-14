@@ -7,6 +7,7 @@ import Root from './Components/Root/Root';
 import Home from './Components/Home/Home';
 import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
+import ViewProperty from './Components/View-property/ViewProperty';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
+      },
+      {
+        path: '/property',
+        element: <ViewProperty></ViewProperty>,
       },
       {
         path: '/login',
