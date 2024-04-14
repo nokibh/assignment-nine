@@ -37,7 +37,7 @@ const Login = () => {
                   </a>
                 </label>
                 <p>
-                  New to Site?{' '}
+                  New to Site?
                   <NavLink to="/register" className="text-blue-600">
                     Register
                   </NavLink>

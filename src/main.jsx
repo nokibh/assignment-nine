@@ -8,10 +8,12 @@ import Home from './Components/Home/Home';
 import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
 import ViewProperty from './Components/View-property/ViewProperty';
+import ErrorPage from './Components/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
+    errorElement: <ErrorPage></ErrorPage>,
     element: <Root></Root>,
     children: [
       {
