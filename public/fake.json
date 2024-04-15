@@ -1,0 +1,110 @@
+[
+  {
+    "id": "001",
+    "segment_name": "Single-family homes",
+    "estate_title": "Cozy Family Home",
+    "description": "Beautiful single-family home with spacious rooms and a backyard garden.",
+    "price": 350000,
+    "status": "sale",
+    "area": "2000 sq ft",
+    "location": "123 Main St",
+    "facilities": ["living room", "kitchen", "backyard"],
+    "image": " https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg "
+  },
+  {
+    "id": "002",
+    "segment_name": "Townhouses",
+    "estate_title": "Modern Townhouse",
+    "description": "Contemporary townhouse with urban amenities and easy access to city life.",
+    "price": 420000,
+    "status": "sale",
+    "area": "1800 sq ft",
+    "location": "789 Elm St",
+    "facilities": ["living room", "kitchen", "garage"],
+    "image": " https://images.pexels.com/photos/19443316/pexels-photo-19443316/free-photo-of-houses-along-empty-street.jpeg "
+  },
+  {
+    "id": "003",
+    "segment_name": "City Apartments",
+    "estate_title": "Luxury Urban Apartment",
+    "description": "Spacious apartment in a bustling city neighborhood with modern amenities.",
+    "price": 3000,
+    "status": "rent",
+    "area": "1200 sq ft",
+    "location": "456 Oak Ave",
+    "facilities": ["living room", "kitchen", "fitness center"],
+    "image": " https://images.pexels.com/photos/15924191/pexels-photo-15924191/free-photo-of-block-of-flats.jpeg "
+  },
+  {
+    "id": "004",
+    "segment_name": "Student Housing",
+    "estate_title": "College Dormitory",
+    "description": "Convenient student housing close to campus, featuring study lounges and recreation areas.",
+    "price": 1200,
+    "status": "rent",
+    "area": "120 sq ft",
+    "location": "1600 University Blvd",
+    "facilities": ["shared living room", "study area", "laundry room"],
+    "image": " https://images.pexels.com/photos/16632357/pexels-photo-16632357/free-photo-of-people-in-front-of-schonbrunn-palace.jpeg "
+  },
+  {
+    "id": "005",
+    "segment_name": "Senior Living",
+    "estate_title": "Retirement Community",
+    "description": "Comfortable retirement community offering independent living and social activities.",
+    "price": 2500,
+    "status": "rent",
+    "area": "1500 sq ft",
+    "location": "321 Elderly Way",
+    "facilities": ["community center", "garden", "healthcare services"],
+    "image": " https://floorplanforrealestate.com/wp-content/uploads/2020/01/Senior-Living-Communities-1024x684.jpg "
+  },
+  {
+    "id": "006",
+    "segment_name": "Vacation Rentals",
+    "estate_title": "Seaside Cottage",
+    "description": "Charming cottage by the beach, perfect for a relaxing vacation getaway.",
+    "price": 200,
+    "status": "rent",
+    "area": "1000 sq ft",
+    "location": "100 Oceanfront Dr",
+    "facilities": ["living room", "kitchen", "private beach access"],
+    "image": " https://www.historic-uk.com/wp-content/uploads/2020/02/cottages-by-the-sea-banner-1-scaled.jpg "
+  },
+  {
+    "id": "007",
+    "segment_name": "Luxury Condos",
+    "estate_title": "Skyline Penthouse",
+    "description": "Exquisite penthouse offering breathtaking skyline views and luxury amenities.",
+    "price": 1500000,
+    "status": "sale",
+    "area": "3000 sq ft",
+    "location": "789 Highrise Ave",
+    "facilities": ["living room", "kitchen", "rooftop pool"],
+    "image": " https://images.pexels.com/photos/17645578/pexels-photo-17645578/free-photo-of-burj-khalifa-in-dubai.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 "
+  },
+  {
+    "id": "008",
+    "segment_name": "Lakefront Homes",
+    "estate_title": "Lakeside Retreat",
+    "description": "Tranquil lakeside home with panoramic views and private dock access.",
+    "price": 800000,
+    "status": "sale",
+    "area": "2500 sq ft",
+    "location": "101 Lakeview Dr",
+    "facilities": ["living room", "kitchen", "boat dock"],
+    "image": " https://u.realgeeks.media/lakewoodranchlife/blog/posts/Lakefront_Homes_Florida.jpg "
+  },
+  {
+    "id": "009",
+    "segment_name": "Rural Cabins",
+    "estate_title": "Secluded Cabin Retreat",
+    "description": "Cozy cabin nestled in the woods, offering a peaceful escape from city life.",
+    "price": 300000,
+    "status": "sale",
+    "area": "1500 sq ft",
+    "location": "200 Forest Trail",
+    "facilities": ["living room", "kitchen", "fireplace"],
+    "image": " https://img1.wsimg.com/isteam/ip/82ff9b14-84aa-42e2-9cf9-1462022382fa/c61326a991d4ebc4591a31ff0e30d60f9c6ed17c5e98c.jpeg "
+  }
+]

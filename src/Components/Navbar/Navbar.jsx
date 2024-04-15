@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="container mx-auto">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -24,7 +24,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 "
+              className="menu menu-sm items-center dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-bold  "
             >
               <NavLink
                 to="/"
@@ -37,85 +37,70 @@ const Navbar = () => {
                 Home
               </NavLink>
               <NavLink
-                to="/property"
+                to="/update"
                 className={({ isActive }) =>
                   isActive
                     ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
                     : 'font-bold'
                 }
               >
-                View Property
+                Update Profile
               </NavLink>
               <NavLink
-                to="/login"
+                to="/contact"
                 className={({ isActive }) =>
                   isActive
                     ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
                     : 'font-bold'
                 }
               >
-                Login
-              </NavLink>
-              <NavLink
-                to="/register"
-                className={({ isActive }) =>
-                  isActive
-                    ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
-                    : 'font-bold'
-                }
-              >
-                Register
+                Contact Us
               </NavLink>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <NavLink to="/" className="btn btn-ghost font-bold text-xl">
+            Habib Residence
+          </NavLink>
         </div>
+
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 items-center font-semibold gap-4">
             <NavLink
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
+                  ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded '
                   : 'font-bold'
               }
             >
               Home
             </NavLink>
             <NavLink
-              to="/property"
+              to="/update"
               className={({ isActive }) =>
                 isActive
                   ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
                   : 'font-bold'
               }
             >
-              View Property
+              Update Profile
             </NavLink>
             <NavLink
-              to="/login"
+              to="/contact"
               className={({ isActive }) =>
                 isActive
                   ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
                   : 'font-bold'
               }
             >
-              Login
-            </NavLink>
-            <NavLink
-              to="/register"
-              className={({ isActive }) =>
-                isActive
-                  ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
-                  : 'font-bold'
-              }
-            >
-              Register
+              Contact Us
             </NavLink>
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <NavLink to="/register" className="btn bg-[#59C6D2]">
+            Sign Up
+          </NavLink>
         </div>
       </div>
     </div>

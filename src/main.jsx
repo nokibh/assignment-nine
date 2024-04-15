@@ -9,6 +9,9 @@ import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
 import ViewProperty from './Components/View-property/ViewProperty';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
+import UpdateProfile from './Components/UpdateProfile/UpdateProfile';
+import Contact from './Components/Contact/Contact';
+import PropertyDetails from './Components/PropertyDetails/PropertyDetails';
 
 const router = createBrowserRouter([
   {
@@ -21,8 +24,12 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: '/property',
-        element: <ViewProperty></ViewProperty>,
+        path: '/update',
+        element: <UpdateProfile></UpdateProfile>,
+      },
+      {
+        path: '/contact',
+        element: <Contact></Contact>,
       },
       {
         path: '/login',
@@ -31,6 +38,11 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>,
+      },
+      {
+        path: '/details/:id',
+        element: <PropertyDetails> </PropertyDetails>,
+        loader: () => fetch('../fake.json'),
       },
     ],
   },
