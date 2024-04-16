@@ -10,7 +10,7 @@ const PropertyDetails = () => {
   const card = cards.find(card => card.id === id);
   console.log(card);
   return (
-    <div className="mb-12 mt-6">
+    <div className="mb-12 mt-6  ">
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
           <img src={card.image} className="max-w-sm rounded-lg shadow-2xl" />

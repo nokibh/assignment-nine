@@ -9,7 +9,7 @@ const Property = ({ property }) => {
     property;
   return (
     <div>
-      <div className="card w-80 bg-green-50 shadow-xl">
+      <div className="card w-80 bg-green-50 shadow-xl hover:scale-105 transition">
         <figure className="w-80 h-44 p-2 rounded-lg ">
           <img src={image} alt="Shoes" />
         </figure>
