@@ -59,7 +59,8 @@ const Navbar = () => {
             </ul>
           </div>
           <NavLink to="/" className="btn btn-ghost font-bold text-xl">
-            Habib Residence
+            <span className="text-[#0ab5be8b]">Relaxation</span>
+            <span className="text-[#b20abe9a]">Residence</span>
           </NavLink>
         </div>
 

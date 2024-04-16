@@ -12,12 +12,13 @@ import ErrorPage from './Components/ErrorPage/ErrorPage';
 import UpdateProfile from './Components/UpdateProfile/UpdateProfile';
 import Contact from './Components/Contact/Contact';
 import PropertyDetails from './Components/PropertyDetails/PropertyDetails';
+import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    errorElement: <ErrorPage></ErrorPage>,
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -49,6 +50,8 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <FirebaseProvider>
+      <RouterProvider router={router} />
+    </FirebaseProvider>
   </React.StrictMode>
 );

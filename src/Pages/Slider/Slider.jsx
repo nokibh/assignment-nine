@@ -33,21 +33,21 @@ const Slider = () => {
         <div className="">
           <SwiperSlide>
             <img
-              src="images/home5.jpg"
+              src="images/home10.jpg"
               alt=""
               className="w-full h-64 rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src="images/home6.jpg"
+              src="images/home9.jpg"
               alt=""
               className="w-full h-64 rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src="images/home7.jpg"
+              src="images/home11.jpg"
               alt=""
               className="w-full h-64 rounded-lg"
             />

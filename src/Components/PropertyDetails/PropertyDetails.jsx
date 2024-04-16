@@ -13,7 +13,10 @@ const PropertyDetails = () => {
     <div className="mb-12 mt-6  ">
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
-          <img src={card.image} className="max-w-sm rounded-lg shadow-2xl" />
+          <img
+            src={card.image}
+            className="max-w-sm rounded-lg shadow-2xl h-80"
+          />
           <div>
             <h1 className="text-3xl font-bold"> {card.segment_name}</h1>
             <h4 className="text-1xl font-bold mt-2">{card.estate_title}</h4>
@@ -55,7 +58,7 @@ const PropertyDetails = () => {
             </div>
             <Link to="/">
               {' '}
-              <button className="btn bg-orange-200 rounded-xl">
+              <button className="btn bg-orange-200 w-3/4 rounded-xl">
                 Back To Home
               </button>
             </Link>
