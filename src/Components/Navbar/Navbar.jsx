@@ -30,7 +30,7 @@ const Navbar = () => {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
+                    ? 'text-[#be700ac1] border border-[#be0a5563] p-2 rounded'
                     : 'font-bold'
                 }
               >

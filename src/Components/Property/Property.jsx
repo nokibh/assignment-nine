@@ -51,8 +51,8 @@ const Property = ({ property }) => {
             </ul>
           </div>
           <div className="card-actions justify-end">
-            <Link to={`/details/:${id}`}>
-              <button className="btn btn-primary">View Property</button>
+            <Link to={`/Card/${id}`}>
+              <button className="btn bg-[#8e0abe3e]">View Property</button>
             </Link>
           </div>
         </div>

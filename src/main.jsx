@@ -7,7 +7,7 @@ import Root from './Components/Root/Root';
 import Home from './Components/Home/Home';
 import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
-import ViewProperty from './Components/View-property/ViewProperty';
+
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import UpdateProfile from './Components/UpdateProfile/UpdateProfile';
 import Contact from './Components/Contact/Contact';
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: '/details/:id',
+        path: '/Card/:id',
         element: <PropertyDetails> </PropertyDetails>,
         loader: () => fetch('../fake.json'),
       },
