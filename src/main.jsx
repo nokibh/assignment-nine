@@ -13,6 +13,8 @@ import UpdateProfile from './Components/UpdateProfile/UpdateProfile';
 import Contact from './Components/Contact/Contact';
 import PropertyDetails from './Components/PropertyDetails/PropertyDetails';
 import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
+import Google from './Components/Google/Google';
+import FaceBook from './Components/FaceBook/FaceBook';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,7 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register></Register>,
       },
+
       {
         path: '/Card/:id',
         element: <PropertyDetails> </PropertyDetails>,

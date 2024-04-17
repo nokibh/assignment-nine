@@ -1,10 +1,14 @@
-import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-import { AuthContext } from '../../FirebaseProvider/FirebaseProvider';
+
 import { useForm } from 'react-hook-form';
+import UseAuth from '../Hooks/UseAuth';
+
+import { FaEye, FaEyeSlash } from 'react-icons/fa6';
+import { useState } from 'react';
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const [showPassword, setShowPassword] = useState(false);
+  const { createUser } = UseAuth();
   const {
     register,
     handleSubmit,
@@ -66,28 +70,35 @@ const Register = () => {
               />
             </div>
             <div className="form-control">
-              <div>
+              <div className="relative">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                  type="password"
+                  type={showPassword ? 'text' : 'password'}
+                  name="password"
                   placeholder="password"
                   className="input input-bordered"
                   {...register('password', { required: true })}
-                />
-                {errors.password && (
+                />{' '}
+                {errors.email && (
                   <span className="text-red-500">This field is required</span>
                 )}
+                <span
+                  className="absolute mt-4 -ml-5 "
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                </span>
               </div>
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
                   Forgot password?
                 </a>
               </label>
-              <p>
-                Have a Account?
-                <NavLink to="/login" className="text-blue-600">
+              <p className="font-bold">
+                Have an Account?
+                <NavLink to="/login" className="text-blue-600 ml-3">
                   Login
                 </NavLink>
               </p>

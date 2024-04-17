@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom';
+import UseAuth from '../Hooks/UseAuth';
 
 const Navbar = () => {
+  const { user, logOut } = UseAuth();
   return (
     <div className="container mx-auto">
       <div className="navbar bg-base-100">
@@ -47,6 +49,16 @@ const Navbar = () => {
                 Update Profile
               </NavLink>
               <NavLink
+                to="/login"
+                className={({ isActive }) =>
+                  isActive
+                    ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
+                    : 'font-bold'
+                }
+              >
+                Login
+              </NavLink>
+              <NavLink
                 to="/contact"
                 className={({ isActive }) =>
                   isActive
@@ -87,6 +99,16 @@ const Navbar = () => {
               Update Profile
             </NavLink>
             <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                isActive
+                  ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
+                  : 'font-bold'
+              }
+            >
+              Login
+            </NavLink>
+            <NavLink
               to="/contact"
               className={({ isActive }) =>
                 isActive
@@ -99,9 +121,23 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <NavLink to="/register" className="btn bg-[#59C6D2]">
-            Sign Up
-          </NavLink>
+          {user?.email ? (
+            <div>
+              <p>{user.displayName}</p>
+              <div className="w-10 rounded-full">
+                <img src={user.image} alt="" />
+              </div>
+              <div>
+                <button onClick={logOut} className="btn bg-secondary">
+                  Logout
+                </button>
+              </div>
+            </div>
+          ) : (
+            <NavLink to="/login" className="btn bg-[#59C6D2]">
+              login
+            </NavLink>
+          )}
         </div>
       </div>
     </div>
