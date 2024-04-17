@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 import { useForm } from 'react-hook-form';
 import UseAuth from '../Hooks/UseAuth';
@@ -15,10 +15,15 @@ const Register = () => {
 
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const form = location?.state || '/';
   const onSubmit = data => {
     const { email, password } = data;
     createUser(email, password).then(result => {
-      console.log(result);
+      if (result.user) {
+        navigate(form);
+      }
     });
   };
 

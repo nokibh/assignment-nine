@@ -1,10 +1,9 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 import { useForm } from 'react-hook-form';
 import UseAuth from '../Hooks/UseAuth';
 
 import Google from '../Google/Google';
-import FaceBook from '../FaceBook/FaceBook';
 
 const Login = () => {
   const { signInUser } = UseAuth();
@@ -14,15 +13,16 @@ const Login = () => {
 
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const form = location?.state || '/';
   const onSubmit = data => {
     const { email, password } = data;
-    signInUser(email, password)
-      .then(result => {
-        console.log(result.user);
-      })
-      .catch(error => {
-        console.error(error);
-      });
+    signInUser(email, password).then(result => {
+      if (result.user) {
+        navigate(form);
+      }
+    });
   };
   return (
     <div>

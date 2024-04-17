@@ -1,17 +1,26 @@
 import UseAuth from '../Hooks/UseAuth';
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa6';
+import { useLocation, useNavigate } from 'react-router-dom';
 const Google = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const form = location?.state || '/';
   const { googleLogin, githubLogin } = UseAuth();
   const handleGoogleLogin = () => {
-    googleLogin()
-      .then(res => console.log(res))
-      .catch(error => console.log(error));
+    googleLogin().then(result => {
+      if (result.user) {
+        navigate(form);
+      }
+    });
   };
+
   const handleGithubLogin = () => {
-    githubLogin()
-      .then(res => console.log(res))
-      .catch(error => console.log(error));
+    githubLogin().then(result => {
+      if (result.user) {
+        navigate(form);
+      }
+    });
   };
   return (
     <div>
