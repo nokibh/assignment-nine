@@ -15,6 +15,7 @@ import PropertyDetails from './Components/PropertyDetails/PropertyDetails';
 import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
 import Google from './Components/Google/Google';
 import FaceBook from './Components/FaceBook/FaceBook';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,11 @@ const router = createBrowserRouter([
 
       {
         path: '/Card/:id',
-        element: <PropertyDetails> </PropertyDetails>,
+        element: (
+          <PrivateRoute>
+            <PropertyDetails> </PropertyDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch('../fake.json'),
       },
     ],

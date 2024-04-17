@@ -123,11 +123,18 @@ const Navbar = () => {
         <div className="navbar-end">
           {user?.email ? (
             <div>
-              <p>{user.displayName}</p>
-              <div className="w-10 rounded-full">
-                <img src={user.image} alt="" />
-              </div>
-              <div>
+              <div className="flex">
+                <div
+                  className=" tooltip tooltip-open tooltip-left"
+                  data-tip={user.displayName}
+                >
+                  <img
+                    className=" w-10 rounded-full"
+                    src={user.photoURL}
+                    alt=""
+                  />
+                </div>
+
                 <button onClick={logOut} className="btn bg-secondary">
                   Logout
                 </button>
