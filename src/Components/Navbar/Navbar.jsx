@@ -138,7 +138,7 @@ const Navbar = () => {
                   />
                 </div>
 
-                <button onClick={logOut} className="btn bg-secondary">
+                <button onClick={logOut} className="btn bg-[#d25967b0]">
                   Logout
                 </button>
               </div>
