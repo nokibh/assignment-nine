@@ -2,6 +2,7 @@ import { CiSquareAlert } from 'react-icons/ci';
 import { IoLocationSharp } from 'react-icons/io5';
 import { RiMoneyDollarCircleFill, RiParentLine } from 'react-icons/ri';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
+import DetailBanner from '../../Pages/DetailBanner/DetailBanner';
 
 const PropertyDetails = () => {
   const cards = useLoaderData();
@@ -11,6 +12,9 @@ const PropertyDetails = () => {
   console.log(card);
   return (
     <div className="mb-12 mt-6  ">
+      <div>
+        <DetailBanner></DetailBanner>
+      </div>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
           <img

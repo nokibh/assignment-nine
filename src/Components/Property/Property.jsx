@@ -2,6 +2,7 @@ import { RiMoneyDollarCircleFill } from 'react-icons/ri';
 import { RiParentLine } from 'react-icons/ri';
 import { CiSquareAlert } from 'react-icons/ci';
 import { IoLocationSharp } from 'react-icons/io5';
+import 'animate.css';
 import { Link } from 'react-router-dom';
 
 const Property = ({ property }) => {
@@ -9,7 +10,7 @@ const Property = ({ property }) => {
     property;
   return (
     <div>
-      <div className="card w-80 bg-green-50 shadow-xl hover:scale-105 transition">
+      <div className="card w-80 bg-green-50 shadow-xl hover:scale-105 transition animate__animated animate__rollIn">
         <figure className="w-80 h-44 p-2 rounded-lg ">
           <img src={image} alt="Shoes" />
         </figure>

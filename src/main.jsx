@@ -13,8 +13,7 @@ import UpdateProfile from './Components/UpdateProfile/UpdateProfile';
 import Contact from './Components/Contact/Contact';
 import PropertyDetails from './Components/PropertyDetails/PropertyDetails';
 import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
-import Google from './Components/Google/Google';
-import FaceBook from './Components/FaceBook/FaceBook';
+
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
@@ -29,11 +28,20 @@ const router = createBrowserRouter([
       },
       {
         path: '/update',
-        element: <UpdateProfile></UpdateProfile>,
+        element: (
+          <PrivateRoute>
+            <UpdateProfile></UpdateProfile>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/contact',
-        element: <Contact></Contact>,
+        element: (
+          <PrivateRoute>
+            {' '}
+            <Contact></Contact>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/login',
