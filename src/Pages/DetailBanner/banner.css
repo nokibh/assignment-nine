@@ -1,0 +1,16 @@
+.slide1002 {
+  color: white;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide100 {
+  background-image: url(https://i.ibb.co/N34rtXG/frames-for-your-heart-2d4l-AQAlb-DA-unsplash.jpg);
+}

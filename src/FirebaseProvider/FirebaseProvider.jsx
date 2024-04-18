@@ -6,10 +6,10 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from 'firebase/auth';
 import { createContext, useEffect, useState } from 'react';
 import auth from '../firebase/firebase';
-import { useFormState } from 'react-hook-form';
 
 export const AuthContext = createContext(null);
 const googleProvider = new GoogleAuthProvider();
@@ -22,6 +22,14 @@ const FirebaseProvider = ({ children }) => {
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
+  };
+  // update
+  const updateProfile = (name, email, image) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      email: email,
+      photoURL: image,
+    });
   };
   // sign in user
   const signInUser = (email, password) => {
@@ -60,6 +68,8 @@ const FirebaseProvider = ({ children }) => {
     githubLogin,
     logOut,
     user,
+    loading,
+    updateProfile,
   };
   return (
     <AuthContext.Provider value={allValue}>{children}</AuthContext.Provider>

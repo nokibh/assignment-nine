@@ -72,7 +72,7 @@ const Navbar = () => {
           </div>
           <NavLink to="/" className="btn btn-ghost font-bold text-xl">
             <span className="text-[#0ab5be8b]">Relaxation</span>
-            <span className="text-[#b20abe9a]">Residence</span>
+            <span className=" text-[#b20abe9a]">Residence</span>
           </NavLink>
         </div>
 
@@ -108,16 +108,19 @@ const Navbar = () => {
             >
               Login
             </NavLink>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                isActive
-                  ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
-                  : 'font-bold'
-              }
-            >
-              Contact Us
-            </NavLink>
+
+            {user && (
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive
+                    ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
+                    : 'font-bold'
+                }
+              >
+                Contact Us
+              </NavLink>
+            )}
           </ul>
         </div>
         <div className="navbar-end">
@@ -141,7 +144,7 @@ const Navbar = () => {
               </div>
             </div>
           ) : (
-            <NavLink to="/login" className="btn bg-[#59C6D2]">
+            <NavLink to="/login" className="btn bg-[#59d259]">
               login
             </NavLink>
           )}
